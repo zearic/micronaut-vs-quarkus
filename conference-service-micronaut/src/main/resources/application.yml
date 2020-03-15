@@ -1,0 +1,46 @@
+micronaut:
+  server:
+    port: 8080
+  application:
+    name: conference-service-micronaut
+  metrics:
+    enabled: true
+app:
+  hellomessage: Hi from Micronaut!
+#  io:
+#    watch:
+#      paths: src/main
+#      restart: true
+
+country:
+  service:
+    url: http://localhost:9000
+
+endpoints:
+  all:
+    enabled: true
+    sensitive: false
+  beans:
+    enabled: true
+    sensitive: false
+  info:
+    enabled: true
+    sensitive: false
+
+datasources:
+  default:
+    url: jdbc:h2:tcp://172.17.0.1/~/default
+    driverClassName: org.h2.Driver
+    username: username-default
+    password: ''
+    schema-generate: CREATE_DROP
+    dialect: H2
+jpa:
+  default:
+    properties:
+      hibernate:
+        bytecode:
+          provider: none
+        hbm2ddl:
+          auto: update
+
