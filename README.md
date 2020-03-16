@@ -1,6 +1,6 @@
 # Micronaut vs Quarkus
 
-This project is based on [Battle Of The Microservice Frameworks: Micronaut versus Quarkus edition! by Michel Schudel](https://www.youtube.com/watch?v=hnEXOqcNXPs) and it's [source codes](https://github.com/MichelSchudel/conference-service-micronaut). 
+This project is based on [Battle Of The Microservice Frameworks: Micronaut versus Quarkus edition! by Michel Schudel](https://www.youtube.com/watch?v=hnEXOqcNXPs) and its [source codes](https://github.com/MichelSchudel/conference-service-micronaut). 
 
 In original codes, I have to make some changes to make it work. 
 in this repo, I merged two repos and create a branch for micronaut-data-jdbc, which should have much better performance then jpa. 
@@ -19,11 +19,11 @@ both project will expose REST services that client can create and findAll.
 the master has following artifacts :
  - cons-mn-jpa-jar: Micronaut with JPA jar
  - cons-qk-jar: Quarkus with panache jar
- - cons-qk-native: Quarkus with panache jar
+ - cons-qk-native: Quarkus with panache native image
 
 the branch micronaut-data-jdbc has following:
  - cons-mn-jdbc-jar: Micronaut with jdbc jar
- - cons-mn-jdbc-native: Micronaut with jdbc native
+ - cons-mn-jdbc-native: Micronaut with jdbc native image
  
  ### Test results
  
