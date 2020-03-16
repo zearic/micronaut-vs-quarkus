@@ -1,0 +1,12 @@
+# 1. before build the docker native image, run following to generate the native image.
+# native-image --no-server -J-Xmx7g -cp build/libs/conference-service-micronaut-*-all.jar build/libs/conference-service-micronaut
+# 2. then run following to build the docker image
+# docker build -f src/main/docker/Dockerfile.native -t cons-mn-jdbc-native .
+# 3. run local
+# docker run -i --rm -p 8102:8080 --name cons-mn-jdbc-native cons-mn-jdbc-native
+
+FROM frolvlad/alpine-glibc
+RUN apk update && apk add libstdc++
+COPY build/libs/conference-service-micronaut /opt/docker/app-runner
+EXPOSE 8080
+CMD ["/opt/docker/app-runner"]

@@ -1,13 +1,12 @@
 package nl.craftsmen.conference.service.micronaut;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import java.util.List;
 
-@Singleton
+//@Singleton
 public class ConferenceRepository {
 
     @Inject

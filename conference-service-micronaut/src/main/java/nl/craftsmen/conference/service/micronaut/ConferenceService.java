@@ -10,23 +10,17 @@ import java.util.stream.StreamSupport;
 public class ConferenceService {
 
     @Inject
-    private ConferenceRepository conferenceRepository;
-
-    @Inject
-    private ConferenceCrudRepository conferenceCrudRepository;
-
-    @Inject
-    private ConferenceJdbcCrudRepository conferenceJdbcCrudRepository;
+    ConferenceCrudRepository conferencecrudrepository;
 
     @Inject
     CountryClient countryClient;
 
     public List<Conference> getAll() {
-        return toList(conferenceRepository.findAll());
+        return toList(conferencecrudrepository.findAll());
     }
 
     public void create(Conference conference) {
-        conferenceRepository.save(conference);
+        conferencecrudrepository.save(conference);
     }
 
     public List<ExtendedConference> getAllWithCountry() {
